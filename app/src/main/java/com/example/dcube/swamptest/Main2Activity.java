@@ -1,8 +1,6 @@
 package com.example.dcube.swamptest;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,20 +9,14 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Locale;
 import java.util.Map;
-import java.util.Set;
 
-public class MainActivity extends AppCompatActivity {
+public class Main2Activity extends AppCompatActivity {
 
     private DatabaseReference mDatabase;
     TextToSpeech tts;
@@ -46,9 +38,9 @@ public class MainActivity extends AppCompatActivity {
             case MotionEvent.ACTION_POINTER_DOWN: {
                 int pointerCount = event.getPointerCount();
 
-                
+
                 pointerCountSpeech(pointerCount);
-                
+
 
                 Toast.makeText(this, "Number of Pointers " + String.valueOf(pointerCount), Toast.LENGTH_SHORT).show();
                 break;
@@ -61,17 +53,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void next(View view) {
 
-        Intent intent = new Intent(MainActivity.this, DataActivity.class);
+        Intent intent = new Intent(Main2Activity.this, DataActivity.class);
         startActivity(intent);
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
 
-
-        tts = new TextToSpeech(MainActivity.this, new TextToSpeech.OnInitListener() {
+        tts = new TextToSpeech(Main2Activity.this, new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
                 // TODO Auto-generated method stub
@@ -91,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        ConvertTextToSpeech();
+        //ConvertTextToSpeech();
 
 
     }
@@ -112,9 +104,9 @@ public class MainActivity extends AppCompatActivity {
 
         String text = null;
         if (pointerCount==2) {
-            text = "This medicine is paracetamol. You are advised to take one pill of this medicine twice a day.  take one right now and another after 6 hours.";
-        } else if (pointerCount == 3)
-            text = "This medicine is benadryl. Take two teaspoons of this right now and repeat every 4 hours. Come back to me if you need any more assistance";
+            text = "Medicine name paracetamol";
+            Toast.makeText(this, "Bhenchoda", Toast.LENGTH_SHORT).show();
+        }
         if (text == null || "".equals(text)) {
             text = "Content not available";
             tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
@@ -126,9 +118,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //Bundle bundle;
+    //public Bundle getBundle() {
+    //    return bundle;
+    //}
+    //if (bundle != null) {
+
+
+
+    //}
+
     private void ConvertTextToSpeech() {
         // TODO Auto-generated method stub
-        String text = "Hi Sid.; Please place the medicine bottle on the screen to know more about it.";
+        String text = "Please place the medicine bottle on the screen to know more.";
         if (text == null || "".equals(text)) {
             text = "Content not available";
             tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
@@ -139,3 +141,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+

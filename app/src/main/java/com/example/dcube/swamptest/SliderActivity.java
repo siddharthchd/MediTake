@@ -134,7 +134,7 @@ public class SliderActivity extends AppCompatActivity {
 
         private void launchHomeScreen() {
 
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, DataActivity.class));
             finish();
         }
 

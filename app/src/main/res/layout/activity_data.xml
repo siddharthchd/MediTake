@@ -9,7 +9,7 @@
 
 
     <Button
-        android:id="@+id/vasu"
+        android:id="@+id/register"
         style="@android:style/Widget.DeviceDefault.Light.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,11 +17,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:onClick="register"
         android:text="Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3"
+        app:layout_constraintTop_toBottomOf="@+id/patientReport"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -79,7 +80,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/patientName"
         android:layout_width="313dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -94,7 +95,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/patientAge"
         android:layout_width="313dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -106,10 +107,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/patientName" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/patientReport"
         android:layout_width="313dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -121,6 +122,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/patientAge" />
 
 </android.support.constraint.ConstraintLayout>
