@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MediTake</string>
+
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="start">Start</string>
+
+    <string name="title_slide1">An Easier Way</string>
+    <string name="desc_slide1">MedX will help the Visually impaired in their daily dose of prescription with no hasle.</string>
+
+    <string name="title_slide2">Doctor Approved Prescription</string>
+    <string name="desc_slide2">Prescription are approved and made by the doctors for the intake of the disabled patients</string>
+
+    <string name="title_slide3">Regular Speech Alerts</string>
+    <string name="desc_slide3">The app will help the disabled patient by reminding and assisting in their medications</string>
+
+</resources>
